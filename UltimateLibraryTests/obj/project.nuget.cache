@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "fUwqTknCJiwKhJXxlwyN2DAEdOMOFoPK4c2c33Ei4hC2XKzSXgINdQz9Y0xlNuY+s3HJf/ZVKm80J/4Yn8wk6Q==",
+  "dgSpecHash": "O1FZ7hJgCbyAbpcmM+BpktklTXcovAz/iAvorRkQtF29YHv8vCf6Dj6/Lg+WUtv5TjFXxImtwkLXIzYL18bG8g==",
   "success": true,
   "projectFilePath": "C:\\Users\\bachowski.d\\source\\repos\\PerfectConsoleApp\\UltimateLibraryTests\\UltimateLibraryTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\bachowski.d\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
     "C:\\Users\\bachowski.d\\.nuget\\packages\\microsoft.codecoverage\\17.3.2\\microsoft.codecoverage.17.3.2.nupkg.sha512",
     "C:\\Users\\bachowski.d\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
+    "C:\\Users\\bachowski.d\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\bachowski.d\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\bachowski.d\\.nuget\\packages\\microsoft.net.test.sdk\\17.3.2\\microsoft.net.test.sdk.17.3.2.nupkg.sha512",
     "C:\\Users\\bachowski.d\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\bachowski.d\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
