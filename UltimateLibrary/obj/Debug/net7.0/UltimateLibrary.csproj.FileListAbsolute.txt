@@ -1,3 +1,4 @@
+C:\Users\bachowski.d\source\repos\PerfectConsoleApp\UltimateLibrary\bin\Debug\net7.0\Data\LanguageTranslations.json
 C:\Users\bachowski.d\source\repos\PerfectConsoleApp\UltimateLibrary\bin\Debug\net7.0\UltimateLibrary.deps.json
 C:\Users\bachowski.d\source\repos\PerfectConsoleApp\UltimateLibrary\bin\Debug\net7.0\UltimateLibrary.dll
 C:\Users\bachowski.d\source\repos\PerfectConsoleApp\UltimateLibrary\bin\Debug\net7.0\UltimateLibrary.pdb
@@ -10,4 +11,3 @@ C:\Users\bachowski.d\source\repos\PerfectConsoleApp\UltimateLibrary\obj\Debug\ne
 C:\Users\bachowski.d\source\repos\PerfectConsoleApp\UltimateLibrary\obj\Debug\net7.0\refint\UltimateLibrary.dll
 C:\Users\bachowski.d\source\repos\PerfectConsoleApp\UltimateLibrary\obj\Debug\net7.0\UltimateLibrary.pdb
 C:\Users\bachowski.d\source\repos\PerfectConsoleApp\UltimateLibrary\obj\Debug\net7.0\ref\UltimateLibrary.dll
-C:\Users\bachowski.d\source\repos\PerfectConsoleApp\UltimateLibrary\bin\Debug\net7.0\Data\LanguageTranslations.json

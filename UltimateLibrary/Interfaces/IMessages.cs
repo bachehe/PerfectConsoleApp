@@ -3,5 +3,6 @@
     public interface IMessages
     {
         string Greeting(string language);
+        bool IsValidString(params string[] values);
     }
 }
