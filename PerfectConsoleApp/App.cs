@@ -6,28 +6,22 @@ namespace PerfectConsoleApp;
 public class App
 {
     private readonly IMessages _messages;
-    private const string SUBSTRING = "-lang=";
+    private readonly IConsoleHelper _helper;
 
-    public App(IMessages messages)
+    public App(IMessages messages, IConsoleHelper helper)
     {
         _messages = messages;
+        _helper = helper;
     }
 
     public void Run(string[] args)
     {
-        string lang = "es";
-
-        for (int i = 0; i < args.Length; i++)
+        while (true)
         {
-            if (args[i].ToLower().StartsWith(SUBSTRING))
-            {
-                lang = args[i].Substring(SUBSTRING.Length);
-                break;
-            }
-        }
+            string message = _messages.Greeting();
 
-        string message = _messages.Greeting(lang);
-        Console.WriteLine(message);
+            _helper.ConsoleWriteLine(message);
+        }
     }
 }
 

@@ -2,7 +2,8 @@
 {
     public interface IMessages
     {
-        string Greeting(string language);
+        string ReadLines();
+        string Greeting();
         bool IsValidString(params string[] values);
     }
 }
