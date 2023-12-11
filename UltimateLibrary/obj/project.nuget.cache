@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "TM3gLCVW5swyDgbigog93tFY7NFYGCRPOnPbhEM9QJRfEMf4HdlkK+HDT+eCkAnh5Ekivvn//8LBcjngoAkxWQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\bachowski.d\\source\\repos\\PerfectConsoleApp\\UltimateLibrary\\UltimateLibrary.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://172.24.0.46/NugetFeed/nuget'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+    }
+  ]
+}

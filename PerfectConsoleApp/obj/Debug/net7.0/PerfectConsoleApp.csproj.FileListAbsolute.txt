@@ -1,0 +1,15 @@
+C:\Users\bachowski.d\source\repos\PerfectConsoleApp\PerfectConsoleApp\bin\Debug\net7.0\PerfectConsoleApp.exe
+C:\Users\bachowski.d\source\repos\PerfectConsoleApp\PerfectConsoleApp\bin\Debug\net7.0\PerfectConsoleApp.deps.json
+C:\Users\bachowski.d\source\repos\PerfectConsoleApp\PerfectConsoleApp\bin\Debug\net7.0\PerfectConsoleApp.runtimeconfig.json
+C:\Users\bachowski.d\source\repos\PerfectConsoleApp\PerfectConsoleApp\bin\Debug\net7.0\PerfectConsoleApp.dll
+C:\Users\bachowski.d\source\repos\PerfectConsoleApp\PerfectConsoleApp\bin\Debug\net7.0\PerfectConsoleApp.pdb
+C:\Users\bachowski.d\source\repos\PerfectConsoleApp\PerfectConsoleApp\obj\Debug\net7.0\PerfectConsoleApp.csproj.AssemblyReference.cache
+C:\Users\bachowski.d\source\repos\PerfectConsoleApp\PerfectConsoleApp\obj\Debug\net7.0\PerfectConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bachowski.d\source\repos\PerfectConsoleApp\PerfectConsoleApp\obj\Debug\net7.0\PerfectConsoleApp.AssemblyInfoInputs.cache
+C:\Users\bachowski.d\source\repos\PerfectConsoleApp\PerfectConsoleApp\obj\Debug\net7.0\PerfectConsoleApp.AssemblyInfo.cs
+C:\Users\bachowski.d\source\repos\PerfectConsoleApp\PerfectConsoleApp\obj\Debug\net7.0\PerfectConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\bachowski.d\source\repos\PerfectConsoleApp\PerfectConsoleApp\obj\Debug\net7.0\PerfectConsoleApp.dll
+C:\Users\bachowski.d\source\repos\PerfectConsoleApp\PerfectConsoleApp\obj\Debug\net7.0\refint\PerfectConsoleApp.dll
+C:\Users\bachowski.d\source\repos\PerfectConsoleApp\PerfectConsoleApp\obj\Debug\net7.0\PerfectConsoleApp.pdb
+C:\Users\bachowski.d\source\repos\PerfectConsoleApp\PerfectConsoleApp\obj\Debug\net7.0\PerfectConsoleApp.genruntimeconfig.cache
+C:\Users\bachowski.d\source\repos\PerfectConsoleApp\PerfectConsoleApp\obj\Debug\net7.0\ref\PerfectConsoleApp.dll
