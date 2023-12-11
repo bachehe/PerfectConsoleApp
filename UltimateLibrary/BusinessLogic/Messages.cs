@@ -26,11 +26,11 @@ public class Messages : IMessages
 
         try
         {
-            //take json file and deserialize it into single string
+            //Take json file and deserialize it into single string
             var msgSets = JsonSerializer
                 .Deserialize<List<Languages>>
                 (
-                    File.ReadAllText("LanguageTranslations.json"), opt
+                    File.ReadAllText("Data\\LanguageTranslations.json"), opt
                 );
 
             var msgs = msgSets.Where(x => x.Language == language).First();
