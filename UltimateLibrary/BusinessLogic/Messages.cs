@@ -1,5 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
+using System.Security.Cryptography.X509Certificates;
 using System.Text.Json;
+using UltimateLibrary.Helpers;
 using UltimateLibrary.Interfaces;
 using UltimateLibrary.Models;
 
@@ -8,47 +10,87 @@ namespace UltimateLibrary.BusinessLogic;
 public class Messages : IMessages
 {
     private const string GREETING = "Greeting";
+    private const string JsonPath = "Data\\LanguageTranslations.json";
     private readonly ILogger<Messages> _log;
+    private readonly IConsoleHelper _helper;
 
-    public Messages(ILogger<Messages> log)
+    public Messages(ILogger<Messages> log, IConsoleHelper helper)
     {
         _log = log;
+        _helper = helper;
     }
     private string LookUpTranslation(string key, string language)
     {
         if (!IsValidString(key, language))
             return string.Empty;
 
-        JsonSerializerOptions opt = new()
-        {
-            PropertyNameCaseInsensitive = true
-        };
 
         try
         {
             //Take json file and deserialize it into single string
-            var msgSets = JsonSerializer
-                .Deserialize<List<Languages>>
-                (
-                    File.ReadAllText("Data\\LanguageTranslations.json"), opt
-                );
+            var msgSets = Deserialise();
 
             var msgs = msgSets.Where(x => x.Language == language).First();
 
             if (!IsValidString(msgs.Language, msgs.Translation[key]))
-                throw new Exception("No translation found");
+                throw new Exception(_helper.ErrorTranslation);
 
             return msgs.Translation[key];
         }
         catch (Exception ex)
         {
-            _log.LogError("Error looking up for translation", ex);
+            _log.LogError(_helper.ErrorLookingForTranslation, ex);
             throw new Exception(ex.Message);
         }
     }
+    private string HandleConversation()
+    {
+        JsonSerializerOptions opt = new()
+        {
+            PropertyNameCaseInsensitive = true
+        };
 
-    public string Greeting(string language)
-        => LookUpTranslation(GREETING, language);
+        var msgSets = Deserialise();
+
+        _helper.ConsoleWriteLine();
+        _helper.ConsoleWriteLine(msgSets);
+
+        var res = Console.ReadLine();
+
+        foreach (var item in msgSets)
+        {
+            if (res == item.Language)
+                return res;
+        }
+
+        return string.Empty;
+    }
+    private List<Languages> Deserialise()
+    {
+        JsonSerializerOptions opt = new()
+        {
+            PropertyNameCaseInsensitive = true
+        };
+
+        var msgSets = JsonSerializer
+           .Deserialize<List<Languages>>
+           (
+               File.ReadAllText(JsonPath), opt
+           );
+
+        return msgSets;
+    }
+
+    public string Greeting()
+    {
+        var selectedLanguage = HandleConversation();
+
+
+        if (selectedLanguage == string.Empty && selectedLanguage != "x")
+            return _helper.InvalidKey;
+
+        return LookUpTranslation(GREETING, selectedLanguage);
+    }
 
     public bool IsValidString(params string[] values)
     {

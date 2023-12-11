@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using UltimateLibrary.Interfaces;
 using PerfectConsoleApp;
+using UltimateLibrary.Helpers;
 
 using IHost host = CreateHostBuilder(args).Build(); 
 using var scope = host.Services.CreateScope();
@@ -23,6 +24,7 @@ static IHostBuilder CreateHostBuilder(string[] args)
     return Host.CreateDefaultBuilder(args)
         .ConfigureServices((_, services) => {
             services.AddSingleton<IMessages, Messages>();
+            services.AddSingleton<IConsoleHelper, ConsoleHelper>();
             services.AddSingleton<App>();
         });
 }

@@ -13,9 +13,9 @@ public class MessagesTest
     {
         ILogger<Messages> logger = new NullLogger<Messages>();
 
-        Messages msgs = new(logger);
+        Messages msgs = new(logger, null);
 
-        var result = msgs.Greeting(key);
+        var result = msgs.Greeting();
 
         Assert.Equal(expected, result);
     }
@@ -27,10 +27,10 @@ public class MessagesTest
         var expected = "Sequence contains no elements";
         ILogger<Messages> logger = new NullLogger<Messages>();
 
-        Messages msgs = new(logger);
+        Messages msgs = new(logger, null);
 
         Assert.Throws<Exception>(
-            () => msgs.Greeting(key));
+            () => msgs.Greeting());
     }
     [Theory]
     [InlineData("test")]
@@ -40,7 +40,7 @@ public class MessagesTest
     {
         ILogger<Messages> logger = new NullLogger<Messages>();
 
-        Messages msgs = new(logger);
+        Messages msgs = new(logger, null);
 
         Assert.True(msgs.IsValidString(value));
     } 
@@ -51,7 +51,7 @@ public class MessagesTest
     {
         ILogger<Messages> logger = new NullLogger<Messages>();
 
-        Messages msgs = new(logger);
+        Messages msgs = new(logger, null);
 
         Assert.False(msgs.IsValidString(value));
     }

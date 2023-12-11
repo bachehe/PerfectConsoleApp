@@ -2,7 +2,7 @@
 {
     public interface IMessages
     {
-        string Greeting(string language);
+        string Greeting();
         bool IsValidString(params string[] values);
     }
 }
