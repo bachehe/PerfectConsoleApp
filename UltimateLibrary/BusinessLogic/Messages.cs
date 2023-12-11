@@ -1,7 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
-using System.Security.Cryptography.X509Certificates;
 using System.Text.Json;
-using UltimateLibrary.Helpers;
 using UltimateLibrary.Interfaces;
 using UltimateLibrary.Models;
 
@@ -9,21 +7,71 @@ namespace UltimateLibrary.BusinessLogic;
 
 public class Messages : IMessages
 {
+    #region CONST
     private const string GREETING = "Greeting";
     private const string JsonPath = "Data\\LanguageTranslations.json";
+    #endregion
+
+    #region READONLY
     private readonly ILogger<Messages> _log;
     private readonly IConsoleHelper _helper;
+    private readonly IInputReader _inputReader;
+    #endregion
 
-    public Messages(ILogger<Messages> log, IConsoleHelper helper)
+    #region CTOR
+    public Messages(ILogger<Messages> log, IConsoleHelper helper, IInputReader inputReader)
     {
         _log = log;
         _helper = helper;
+        _inputReader = inputReader;
     }
+    #endregion
+
+    #region PUBLIC METHODS
+    /// <summary>
+    /// Handler of Conversation
+    /// </summary>
+    /// <returns></returns>
+    public string Greeting()
+    {
+        var selectedLanguage = HandleConversation();
+
+        if (selectedLanguage == string.Empty && selectedLanguage != "x")
+            return _helper.InvalidKey;
+
+        return LookUpTranslation(GREETING, selectedLanguage);
+    }
+
+    /// <summary>
+    /// Validates if input string is in correct and expected form
+    /// </summary>
+    /// <param name="values"></param>
+    /// <returns></returns>
+    public bool IsValidString(params string[] values)
+    {
+        foreach (var value in values)
+        {
+            if (value == null || value == string.Empty)
+                return false;
+        }
+        return true;
+    }
+
+    #endregion
+
+    #region PRIVATE METHODS
+
+    /// <summary>
+    /// Searching for key in deserialized json object
+    /// </summary>
+    /// <param name="key"></param>
+    /// <param name="language"></param>
+    /// <returns></returns>
+    /// <exception cref="Exception"></exception>
     private string LookUpTranslation(string key, string language)
     {
         if (!IsValidString(key, language))
             return string.Empty;
-
 
         try
         {
@@ -43,6 +91,11 @@ public class Messages : IMessages
             throw new Exception(ex.Message);
         }
     }
+
+    /// <summary>
+    /// Deserialize and Write in console users choice
+    /// </summary>
+    /// <returns></returns>
     private string HandleConversation()
     {
         JsonSerializerOptions opt = new()
@@ -54,7 +107,7 @@ public class Messages : IMessages
 
         _helper.ConsoleWriteLine(msgSets);
 
-        var res = Console.ReadLine();
+        var res = _inputReader.ReadLine();
 
         foreach (var item in msgSets)
         {
@@ -64,7 +117,6 @@ public class Messages : IMessages
 
         return string.Empty;
     }
-
     private List<Languages> Deserialise()
     {
         JsonSerializerOptions opt = new()
@@ -80,25 +132,6 @@ public class Messages : IMessages
 
         return msgSets;
     }
-
-    public string Greeting()
-    {
-        var selectedLanguage = HandleConversation();
-
-        if (selectedLanguage == string.Empty && selectedLanguage != "x")
-            return _helper.InvalidKey;
-
-        return LookUpTranslation(GREETING, selectedLanguage);
-    }
-
-    public bool IsValidString(params string[] values)
-    {
-        foreach (var value in values)
-        {
-            if (value == null || value == string.Empty)
-                return false;
-        }
-        return true;
-    }
+    #endregion
 }
 
