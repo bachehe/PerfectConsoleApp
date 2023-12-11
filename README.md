@@ -26,11 +26,20 @@ OF COURSE🌈
 
 
 
+## How to begin the fun?
+
+>Clone, f5😊
+
+
 
 ## Enjoy the ride.🎵🎵🎵
-
 It will be the best translation you will **EVER** Encounter 🌟🚀😊
+
 ![Hot Face](https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/Smileys/Hot%20Face.webp) 
+
+
+
+
 
 
 
