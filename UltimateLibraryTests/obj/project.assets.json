@@ -6413,9 +6413,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bachowski.d\\source\\repos\\PerfectConsoleApp\\UltimateLibraryTests\\UltimateLibraryTests.csproj",
-      "projectName": "UltimateLibraryTests",
-      "projectPath": "C:\\Users\\bachowski.d\\source\\repos\\PerfectConsoleApp\\UltimateLibraryTests\\UltimateLibraryTests.csproj",
+      "projectUniqueName": "C:\\Users\\bachowski.d\\source\\repos\\PerfectConsoleApp\\UltimateLibraryTests\\UltimateLibrary.Tests.csproj",
+      "projectName": "UltimateLibrary.Tests",
+      "projectPath": "C:\\Users\\bachowski.d\\source\\repos\\PerfectConsoleApp\\UltimateLibraryTests\\UltimateLibrary.Tests.csproj",
       "packagesPath": "C:\\Users\\bachowski.d\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\bachowski.d\\source\\repos\\PerfectConsoleApp\\UltimateLibraryTests\\obj\\",
       "projectStyle": "PackageReference",

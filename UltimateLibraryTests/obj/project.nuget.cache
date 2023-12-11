@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BSsSSkE2TelCe0X8dVT3OfdYz14F4NCOIEZBgpiEFkj/eyh2g5KWEIHcCdVMShBCzx9nx01oOsMo1fddfUCHCg==",
+  "dgSpecHash": "ZUp6ddXgXVZPHp7Hc/toaLkdW4hFb6lPIlwoXiyDTzUKX+p4tf6ugr4Ly+iZnwxNZiH1fz5H4pNyWEJ5xXVfTQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\bachowski.d\\source\\repos\\PerfectConsoleApp\\UltimateLibraryTests\\UltimateLibraryTests.csproj",
+  "projectFilePath": "C:\\Users\\bachowski.d\\source\\repos\\PerfectConsoleApp\\UltimateLibraryTests\\UltimateLibrary.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\bachowski.d\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\bachowski.d\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
