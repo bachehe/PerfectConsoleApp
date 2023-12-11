@@ -30,7 +30,7 @@ namespace UltimateLibrary.Helpers
         public void ConsoleWriteLine(string message)
         {
             Console.ForegroundColor= ConsoleColor.Green;
-            Console.WriteLine("\n"+ message);
+            Console.WriteLine("\n"+ message + "\n");
             Console.ForegroundColor = ConsoleColor.White;
         }
         public void ConsoleWriteLineExit()
