@@ -21,7 +21,7 @@ public class MessagesTest
     }
 
     [Fact]
-    public void Grretig_IncorrectKey_ReturnHandlingException()
+    public void Greetig_IncorrectKey_ReturnHandlingException()
     {
         var key = "idontexist";
         var expected = "Sequence contains no elements";
@@ -31,5 +31,28 @@ public class MessagesTest
 
         Assert.Throws<Exception>(
             () => msgs.Greeting(key));
+    }
+    [Theory]
+    [InlineData("test")]
+    [InlineData(" ")]
+    [InlineData("-1!%51.31/5")]
+    public void IsValidString_ForInput_ShouldReturnTrue(string value)
+    {
+        ILogger<Messages> logger = new NullLogger<Messages>();
+
+        Messages msgs = new(logger);
+
+        Assert.True(msgs.IsValidString(value));
+    } 
+    [Theory]
+    [InlineData("")]
+    [InlineData(null)]
+    public void IsValidString_ForInput_ShouldReturnFalse(string value)
+    {
+        ILogger<Messages> logger = new NullLogger<Messages>();
+
+        Messages msgs = new(logger);
+
+        Assert.False(msgs.IsValidString(value));
     }
 }

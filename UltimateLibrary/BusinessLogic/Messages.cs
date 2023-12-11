@@ -50,7 +50,7 @@ public class Messages : IMessages
     public string Greeting(string language)
         => LookUpTranslation(GREETING, language);
 
-    private bool IsValidString(params string[] values)
+    public bool IsValidString(params string[] values)
     {
         foreach (var value in values)
         {
