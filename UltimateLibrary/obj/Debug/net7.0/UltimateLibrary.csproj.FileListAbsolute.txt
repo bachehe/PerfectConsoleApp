@@ -1,0 +1,13 @@
+C:\Users\bachowski.d\source\repos\PerfectConsoleApp\UltimateLibrary\bin\Debug\net7.0\UltimateLibrary.deps.json
+C:\Users\bachowski.d\source\repos\PerfectConsoleApp\UltimateLibrary\bin\Debug\net7.0\UltimateLibrary.dll
+C:\Users\bachowski.d\source\repos\PerfectConsoleApp\UltimateLibrary\bin\Debug\net7.0\UltimateLibrary.pdb
+C:\Users\bachowski.d\source\repos\PerfectConsoleApp\UltimateLibrary\obj\Debug\net7.0\UltimateLibrary.csproj.AssemblyReference.cache
+C:\Users\bachowski.d\source\repos\PerfectConsoleApp\UltimateLibrary\obj\Debug\net7.0\UltimateLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bachowski.d\source\repos\PerfectConsoleApp\UltimateLibrary\obj\Debug\net7.0\UltimateLibrary.AssemblyInfoInputs.cache
+C:\Users\bachowski.d\source\repos\PerfectConsoleApp\UltimateLibrary\obj\Debug\net7.0\UltimateLibrary.AssemblyInfo.cs
+C:\Users\bachowski.d\source\repos\PerfectConsoleApp\UltimateLibrary\obj\Debug\net7.0\UltimateLibrary.csproj.CoreCompileInputs.cache
+C:\Users\bachowski.d\source\repos\PerfectConsoleApp\UltimateLibrary\obj\Debug\net7.0\UltimateLibrary.dll
+C:\Users\bachowski.d\source\repos\PerfectConsoleApp\UltimateLibrary\obj\Debug\net7.0\refint\UltimateLibrary.dll
+C:\Users\bachowski.d\source\repos\PerfectConsoleApp\UltimateLibrary\obj\Debug\net7.0\UltimateLibrary.pdb
+C:\Users\bachowski.d\source\repos\PerfectConsoleApp\UltimateLibrary\obj\Debug\net7.0\ref\UltimateLibrary.dll
+C:\Users\bachowski.d\source\repos\PerfectConsoleApp\UltimateLibrary\bin\Debug\net7.0\Data\LanguageTranslations.json
