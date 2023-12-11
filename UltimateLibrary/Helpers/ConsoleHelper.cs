@@ -33,10 +33,6 @@ namespace UltimateLibrary.Helpers
             Console.WriteLine("\n"+ message);
             Console.ForegroundColor = ConsoleColor.White;
         }
-        public void ConsoleWriteLine()
-        {
-            Console.WriteLine("Press x 2 times to exit THE.PERFECT.APP");
-        } 
         public void ConsoleWriteLineExit()
         {
             Console.WriteLine("THE.PERFECT.APP will be closed...");

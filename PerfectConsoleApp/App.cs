@@ -16,17 +16,9 @@ public class App
 
     public void Run(string[] args)
     {
-        var IsActive = true;
-        while (IsActive)
+        while (true)
         {
             string message = _messages.Greeting();
-
-            if (Console.ReadLine() == "x")
-            {
-                IsActive = false;
-                if (!IsActive) _helper.ConsoleWriteLineExit();
-                break;
-            }
 
             _helper.ConsoleWriteLine(message);
         }

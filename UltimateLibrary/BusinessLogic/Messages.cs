@@ -52,7 +52,6 @@ public class Messages : IMessages
 
         var msgSets = Deserialise();
 
-        _helper.ConsoleWriteLine();
         _helper.ConsoleWriteLine(msgSets);
 
         var res = Console.ReadLine();
@@ -65,6 +64,7 @@ public class Messages : IMessages
 
         return string.Empty;
     }
+
     private List<Languages> Deserialise()
     {
         JsonSerializerOptions opt = new()
@@ -84,7 +84,6 @@ public class Messages : IMessages
     public string Greeting()
     {
         var selectedLanguage = HandleConversation();
-
 
         if (selectedLanguage == string.Empty && selectedLanguage != "x")
             return _helper.InvalidKey;

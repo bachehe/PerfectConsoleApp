@@ -10,6 +10,5 @@ public interface IConsoleHelper
 
     void ConsoleWriteLine(List<Languages> lang);
     void ConsoleWriteLine(string message);
-    void ConsoleWriteLine();
     void ConsoleWriteLineExit();
 }
