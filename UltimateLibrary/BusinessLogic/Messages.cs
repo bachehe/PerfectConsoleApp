@@ -96,11 +96,6 @@ public class Messages : IMessages
     /// <returns></returns>
     private string HandleConversation()
     {
-        JsonSerializerOptions opt = new()
-        {
-            PropertyNameCaseInsensitive = true
-        };
-
         var msgSets = Deserialise();
 
         ConsoleHelper.ConsoleWriteLine(msgSets);
