@@ -1,8 +1,6 @@
-﻿namespace UltimateLibrary.Interfaces
+﻿namespace UltimateLibrary.Interfaces;
+public interface IMessages
 {
-    public interface IMessages
-    {
-        string Greeting();
-        bool IsValidString(params string[] values);
-    }
+    string Greeting();
+    bool IsValidString(params string[] values);
 }

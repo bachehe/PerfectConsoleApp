@@ -24,7 +24,6 @@ static IHostBuilder CreateHostBuilder(string[] args)
     return Host.CreateDefaultBuilder(args)
         .ConfigureServices((_, services) => {
             services.AddSingleton<IMessages, Messages>();
-            services.AddSingleton<IConsoleHelper, ConsoleHelper>();
             services.AddSingleton<IInputReader, InputReader>();
             services.AddSingleton<App>();
         });

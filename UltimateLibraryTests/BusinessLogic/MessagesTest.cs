@@ -1,5 +1,4 @@
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Logging.Abstractions;
 using Moq;
 using UltimateLibrary.BusinessLogic;
 using UltimateLibrary.Interfaces;
@@ -9,18 +8,16 @@ namespace UltimateLibraryTests.BusinessLogic;
 public class MessagesTest
 {
     private readonly Messages _msg;
-    private readonly Mock<IConsoleHelper> _mockHelper;
     private readonly Mock<ILogger<Messages>> _mockLogger;
     private readonly Mock<IInputReader> _mockInputReader;
 
 
     public MessagesTest()
     {
-        _mockHelper = new Mock<IConsoleHelper>();
         _mockLogger = new Mock<ILogger<Messages>>();
         _mockInputReader = new Mock<IInputReader>();
 
-        _msg = new Messages(_mockLogger.Object, _mockHelper.Object, _mockInputReader.Object);
+        _msg = new Messages(_mockLogger.Object, _mockInputReader.Object);
     }
 
     [Fact]
@@ -29,7 +26,7 @@ public class MessagesTest
         _mockInputReader.Setup(r => r.ReadLine()).Returns(string.Empty);
         var result = _msg.Greeting();
 
-        Assert.Equal(_mockHelper.Object.InvalidKey, result);
+        Assert.Equal("Invalid Key, please try harder", result);
     }
 
     [Theory]
