@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 using System.Text.Json;
+using UltimateLibrary.Helpers;
 using UltimateLibrary.Interfaces;
 using UltimateLibrary.Models;
 
@@ -14,15 +15,13 @@ public class Messages : IMessages
 
     #region READONLY
     private readonly ILogger<Messages> _log;
-    private readonly IConsoleHelper _helper;
     private readonly IInputReader _inputReader;
     #endregion
 
     #region CTOR
-    public Messages(ILogger<Messages> log, IConsoleHelper helper, IInputReader inputReader)
+    public Messages(ILogger<Messages> log, IInputReader inputReader)
     {
         _log = log;
-        _helper = helper;
         _inputReader = inputReader;
     }
     #endregion
@@ -37,7 +36,7 @@ public class Messages : IMessages
         var selectedLanguage = HandleConversation();
 
         if (selectedLanguage == string.Empty && selectedLanguage != "x")
-            return _helper.InvalidKey;
+            return ConsoleHelper.InvalidKey;
 
         return LookUpTranslation(GREETING, selectedLanguage);
     }
@@ -75,19 +74,18 @@ public class Messages : IMessages
 
         try
         {
-            //Take json file and deserialize it into single string
             var msgSets = Deserialise();
 
             var msgs = msgSets.Where(x => x.Language == language).First();
 
             if (!IsValidString(msgs.Language, msgs.Translation[key]))
-                throw new Exception(_helper.ErrorTranslation);
+                throw new Exception(ConsoleHelper.ErrorTranslation);
 
             return msgs.Translation[key];
         }
         catch (Exception ex)
         {
-            _log.LogError(_helper.ErrorLookingForTranslation, ex);
+            _log.LogError(ConsoleHelper.ErrorLookingForTranslation, ex);
             throw new Exception(ex.Message);
         }
     }
@@ -105,7 +103,7 @@ public class Messages : IMessages
 
         var msgSets = Deserialise();
 
-        _helper.ConsoleWriteLine(msgSets);
+        ConsoleHelper.ConsoleWriteLine(msgSets);
 
         var res = _inputReader.ReadLine();
 

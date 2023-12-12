@@ -1,5 +1,4 @@
-﻿
-namespace UltimateLibrary.Models;
+﻿namespace UltimateLibrary.Models;
 public class Languages
 {
     public string Language { get; set; } = string.Empty;
