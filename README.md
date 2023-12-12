@@ -6,6 +6,7 @@ What does it do...?
 
 ## What do I have?
 
+ - SINGLETON 😇😇😇
  - DEPENDENCY INJECTION 🔥
  - CLEAN ARCHITECTURE 🔥🔥
  - UNIT TESTS 🔥🔥🔥
