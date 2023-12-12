@@ -11,7 +11,6 @@ namespace UltimateLibrary.Helpers
 
         public static void ConsoleWriteLine(List<Languages> lang)
         {
-            
             Console.WriteLine("Select Language:\n");
 
             foreach (var item in lang)
