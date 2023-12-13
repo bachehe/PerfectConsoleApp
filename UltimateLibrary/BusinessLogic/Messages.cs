@@ -76,6 +76,8 @@ public class Messages : IMessages
         {
             var msgSets = Deserialise();
 
+            if (!msgSets.Any()) return string.Empty;
+
             var msgs = msgSets.Where(x => x.Language == language).First();
 
             if (!IsValidString(msgs.Language, msgs.Translation[key]))
@@ -97,6 +99,8 @@ public class Messages : IMessages
     private string HandleConversation()
     {
         var msgSets = Deserialise();
+
+        if (!msgSets.Any()) return string.Empty;
 
         ConsoleHelper.ConsoleWriteLine(msgSets);
 
@@ -123,7 +127,7 @@ public class Messages : IMessages
                File.ReadAllText(JsonPath), opt
            );
 
-        return msgSets;
+        return msgSets ?? new List<Languages>();
     }
     #endregion
 }
