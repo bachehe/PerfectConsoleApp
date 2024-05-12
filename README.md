@@ -1,7 +1,7 @@
 
 # 🔥🔥🔥 THE BEST C# CONSOLE APP 🔥🔥🔥
 
-What does it do...? 
+What does it do..? 
 **IT. TRANSLATES. FROM. KEY.** 😲😲😲
 
 ## What do I have?
